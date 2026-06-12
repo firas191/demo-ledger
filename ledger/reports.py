@@ -24,6 +24,6 @@ def category_totals(transactions: list[Transaction], month: int) -> dict:
     totals: dict = {}
     for t in transactions:
         if t.when.month == month:
-            key = t.description
+            key = t.category
             totals[key] = totals.get(key, 0) + to_usd(t.amount, t.currency)
     return totals

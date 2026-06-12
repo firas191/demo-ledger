@@ -8,3 +8,4 @@ class Transaction:
     currency: str
     when: date
     description: str = ""
+    category: str = ""
