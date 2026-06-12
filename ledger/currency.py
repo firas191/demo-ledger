@@ -13,7 +13,7 @@ def to_usd(amount: float, currency: str) -> float:
     if currency not in RATES:
         raise ValueError(f"Unknown currency: {currency}")
     rate = RATES[currency]
-    return int(amount * rate)
+    return amount * rate
 
 
 def supported_currencies() -> list[str]:
